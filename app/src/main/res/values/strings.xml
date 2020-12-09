@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">PSPAmigosATR</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="string_grant">Grant</string>
+    <string name="warning_permission">To continue, you have to grant all permissions</string>
+    <string name="string_nocontact">No contacts yet</string>
+    <string name="string_selectphone">Select phone</string>
+    <string name="string_severalphones">Several phones</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_phone">Phone</string>
+    <string name="string_save">Save</string>
+    <string name="error_required">Required field</string>
+    <string name="string_nocalls">No calls yet</string>
+</resources>

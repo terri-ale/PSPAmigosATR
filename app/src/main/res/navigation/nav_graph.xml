@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/contactsRoomList">
+
+    <fragment
+        android:id="@+id/contactsRoomList"
+        android:name="com.example.pspamigosatr.view.fragment.FriendsRoomListFragment"
+        android:label="fragment_contacts_room_list"
+        tools:layout="@layout/fragment_contacts_room_list" >
+        <action
+            android:id="@+id/action_contactsRoomList_to_importContact"
+            app:destination="@id/importContact" />
+        <action
+            android:id="@+id/action_contactsRoomList_to_editFriendFragment"
+            app:destination="@id/editFriendFragment" />
+        <action
+            android:id="@+id/action_contactsRoomList_to_callsDetailFragment"
+            app:destination="@id/callsDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/importContact"
+        android:name="com.example.pspamigosatr.view.fragment.ImportContactFragment"
+        android:label="fragment_import_contact"
+        tools:layout="@layout/fragment_import_contact" />
+    <fragment
+        android:id="@+id/editFriendFragment"
+        android:name="com.example.pspamigosatr.view.fragment.EditFriendFragment"
+        android:label="fragment_edit_friend"
+        tools:layout="@layout/fragment_edit_friend" />
+    <fragment
+        android:id="@+id/callsDetailFragment"
+        android:name="com.example.pspamigosatr.view.fragment.CallsDetailFragment"
+        android:label="fragment_calls_detail"
+        tools:layout="@layout/fragment_calls_detail" />
+</navigation>
