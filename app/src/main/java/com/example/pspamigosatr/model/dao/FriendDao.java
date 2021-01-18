@@ -43,7 +43,7 @@ public interface FriendDao {
 
 
     /* This way, count value is 1 when actually there are no calls. I prefer subquery.
-    @Query("SELECT f.id AS f_id, f.name AS f_name, f.phone AS f_phone, f.birthdate AS f_birthdate, count(*) AS count " +
+    @Query("SELECT f.id AS f_id, f.name AS f_name, f.phone AS f_phone, f.birthdate AS f_birthdate, count(c.id) AS count " +
             "FROM friend f " +
             "LEFT JOIN call c " +
             "ON f.id=c.idfriend " +

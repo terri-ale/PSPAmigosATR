@@ -1,11 +1,13 @@
 package com.example.pspamigosatr.receivers;
 
+import android.app.Application;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.example.pspamigosatr.util.CallSaver;
 
@@ -22,6 +24,8 @@ public class IncomingCall extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
+
+        Toast.makeText(context, "Prueba del toast", Toast.LENGTH_SHORT).show();
 
         if(intent.getStringExtra(TelephonyManager.EXTRA_STATE).equalsIgnoreCase(TelephonyManager.EXTRA_STATE_RINGING) && notRegistered) {
 

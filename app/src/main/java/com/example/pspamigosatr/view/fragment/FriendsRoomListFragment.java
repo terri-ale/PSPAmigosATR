@@ -151,12 +151,10 @@ public class FriendsRoomListFragment extends Fragment implements FriendRoomAdapt
     private void requestMissingPermissions(){
         if(Build.VERSION.SDK_INT<Build.VERSION_CODES.M) return;
 
-        int result;
+        int result=PackageManager.PERMISSION_GRANTED;
         List<String> missingPermissions=new ArrayList<>();
         for(String permission : arrayPermissions){
-            result=PackageManager.PERMISSION_GRANTED;
-            if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.M)
-                result=getContext().checkSelfPermission(permission); //if the current version is previous than M, result value will be granted
+            result=getContext().checkSelfPermission(permission);
             if(result!=PackageManager.PERMISSION_GRANTED) {
                 missingPermissions.add(permission);
             }

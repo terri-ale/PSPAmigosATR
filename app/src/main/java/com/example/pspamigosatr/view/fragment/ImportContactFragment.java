@@ -87,7 +87,7 @@ public class ImportContactFragment extends Fragment implements ContactAdapter.On
             rvContact.setHasFixedSize(true);
             rvContact.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-            }
+        }
     }
 
 
@@ -110,6 +110,7 @@ public class ImportContactFragment extends Fragment implements ContactAdapter.On
                     .setSingleChoiceItems(phones2, -1, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
+
                             f.setPhone(phones2[which]);
                             viewModelActivity.insert(f);
                             dialog.dismiss();
